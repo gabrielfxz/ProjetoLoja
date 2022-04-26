@@ -1,0 +1,46 @@
+    <html lang="pt-BR">
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <style>
+            body{
+                padding: 5%;
+            }
+
+            table{
+                font-size: 18pt;
+            }
+
+            .preco{
+                text-align: right;
+                padding-left: 5%;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <h1>
+            Lista de Produtos
+        </h1>
+        <table>
+            <tr>
+                <td><strong>Nome:</strong></td>
+                <td><strong>Preco:</Strong></td>
+            </tr>
+            <%
+                listaProdutos.forEach((esquemaProduto) => {
+            %>
+            <tr>
+                <td>
+                    <%= esquemaProduto.nome %>
+                </td>
+                <td class="preco">
+                    <%= esquemaProduto.preco %>
+                </td>
+                
+            </tr>
+            <% }) %>
+        </table>
+    </body>
+    </html>
